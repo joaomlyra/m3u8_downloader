@@ -1,6 +1,6 @@
 # M3U8 Downloader
 
-Um script em **Python** para baixar vídeos e transmissões a partir de links `.m3u8`.  
+Um script em **Python** para baixar vídeos e transmissões a partir de links `.m3u8`.
 
 ---
 
@@ -10,8 +10,16 @@ Um script em **Python** para baixar vídeos e transmissões a partir de links `.
 
 ---
 
+## Melhorias
+- **Interativo:**agora o script solicita via `input`:
+- URL do .m3u8
+- Nome do arquivo
+- Caminho onde o arquivo será salvo
+
+---
+
 ## Requisitos
-- Python 3.8+  
-- [ffmpeg](https://ffmpeg.org/) instalado e disponível no PATH  
+- Python 3.8+
+- [ffmpeg](https://ffmpeg.org/) instalado e disponível no PATH
 - Bibliotecas Python:
   - `requests`
