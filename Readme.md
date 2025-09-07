@@ -22,10 +22,15 @@ O script lê o `master.m3u8`, lista as qualidades disponíveis (1080p, 720p, 480
 
 ---
 
+## Correções
+
+- Corrigido o problema de exibir "Download concluído" mesmo quando o ffmpeg falhava
+- Adicionada a opção de baixar vários vídeos em sequência sem precisar reiniciar o script 
+
+---
+
 ## Requisitos
 - Python 3.8+
 - [ffmpeg](https://ffmpeg.org/) instalado e disponível no PATH
 - Bibliotecas Python:
   - `requests`
-
-
