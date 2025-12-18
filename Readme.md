@@ -1,36 +1,60 @@
 # M3U8 Downloader
 
-Um script em **Python** para baixar vídeos e transmissões a partir de links `.m3u8`.
-O script lê o `master.m3u8`, lista as qualidades disponíveis (1080p, 720p, 480p, etc.) e permite ao usuário escolher qual baixar usando **ffmpeg**.
+Um aplicativo desktop desenvolvido em **Python** com interface gráfica nativa (**Tkinter**) para baixar vídeos e transmissões a partir de links `.m3u8` de forma simples, sem necessidade de comandos no terminal.
+
+O programa lê a lista mestra, identifica as qualidades disponíveis e utiliza o **FFmpeg** para processar o download com máxima eficiência.
 
 ---
 
-## Funcionalidades
-- Detecta as qualidades disponíveis em um `master.m3u8`
-- Permite escolher manualmente a resolução desejada
-- Faz o download direto para `.mp4` sem perda de qualidade
-- Usa o `ffmpeg` para juntar os segmentos de forma rápida e eficiente
+## 🚀 Funcionalidades
+
+- **Interface Gráfica (GUI):** Janela amigável com botões e menus, eliminando o uso do terminal.
+- **Detector de Qualidade:** Analisa o link e lista automaticamente as resoluções disponíveis (1080p, 720p, 480p, etc.).
+- **Salvar Como:** Utiliza a janela nativa do sistema para você escolher exatamente onde salvar o arquivo e qual nome dar.
+- **Log Integrado:** Visualização em tempo real do status da conexão e do processo do FFmpeg.
+- **Download em Background:** O processo roda em uma *thread* separada, garantindo que a janela não trave durante o download.
 
 ---
 
-## Melhorias
-- Interativo: agora o script solicita via `input`:
-- URL do .m3u8
-- Nome do arquivo
-- Caminho onde o arquivo será salvo
-- Permite escolher manualmente a resolução desejada
+## 📋 Pré-requisitos
+
+Para executar este projeto, você precisa de:
+
+1.  **Python 3.8+** instalado.
+2.  **FFmpeg** instalado e configurado nas variáveis de ambiente (PATH) do sistema.
+3.  Biblioteca `requests` instalada (`pip install requests`).
 
 ---
 
-## Correções
+## 🛠️ Como Usar
 
-- Corrigido o problema de exibir "Download concluído" mesmo quando o ffmpeg falhava
-- Adicionada a opção de baixar vários vídeos em sequência sem precisar reiniciar o script 
+1.  Execute o script:
+    ```bash
+    python nome_do_arquivo.py
+    ```
+2.  **Cole a URL** do arquivo `.m3u8` no campo indicado.
+3.  Clique no botão **"🔍 Buscar Qualidades"**.
+4.  Selecione a resolução desejada na lista que aparecerá.
+5.  Clique em **"⬇️ Baixar Vídeo"**.
+6.  Uma janela abrirá perguntando **onde você deseja salvar** o arquivo `.mp4`.
+7.  Acompanhe o progresso na barra e no log de texto.
 
 ---
 
-## Requisitos
-- Python 3.8+
-- [ffmpeg](https://ffmpeg.org/) instalado e disponível no PATH
-- Bibliotecas Python:
-  - `requests`
+## ⚙️ Tecnologias
+
+- **Python 3**: Linguagem principal.
+- **Tkinter**: Biblioteca padrão para a interface gráfica (GUI).
+- **Requests**: Para requisições HTTP e leitura das playlists.
+- **Subprocess**: Para execução e controle do FFmpeg.
+- **Threading**: Para gerenciamento de processos simultâneos.
+
+---
+
+## ⚠️ Aviso
+
+Esta ferramenta foi desenvolvida para fins educacionais e de arquivamento pessoal. O usuário é responsável por garantir que possui permissão para baixar o conteúdo das transmissões.
+
+---
+
+Desenvolvido por **(JML)**.
